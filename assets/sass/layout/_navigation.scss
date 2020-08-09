@@ -1,0 +1,64 @@
+.menu {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.menu__logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu__nav {
+    position: absolute;
+    right: 6%;
+    top: 0;
+}
+
+.menu__nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu__nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: black;
+    border-radius: 5px;
+    padding-right: 1rem;
+}
+
+.menu__input-menu {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    border: 1px solid #666;
+    border-radius: 30px;
+}
+
+.menu__nav ul li:hover> :not(input) {
+    background-color: black;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+@media (max-width: $md) {
+    .menu__nav {
+        width: 50%;
+        li {
+            width: 25%;
+        }
+    }
+    .menu__nav ul li a {
+        font-size: 0.8rem;
+    }
+    .menu__input-menu {
+        margin-left: 2rem;
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+    .menu .menu__nav li:first-child {
+        display: none;
+    }
+}
